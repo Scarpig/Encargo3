@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  {% block title %}<title>Localwerwer Library</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+  crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body style="background: #e5e6e7;">
+    <nav id="nav" class="nav1" style="background-color: #33b5e5;">
+        <div class="contenedor-nav">
+          
+            <div class="logo">
+              {% if user.is_authenticated == False %}
+                <a href="{% url 'login_view' %}"><img src="{% static 'images/logo.png' %}" alt="My image" style="height: 80px;"></a>
+              {% endif %}
+            </div>
+          
+
+
+            <div class="enlaces" id="enlaces">
+              
+                <a href="{% url 'index' %}" id="enlace-inicio" class="btn-header">Inicio</a>
+                <!--ESTOS SON LOS BOTONES DEL MENU-->
+                <a href="#" id="enlace-equipo" class="btn-header">Equipo</a>
+                <a href="#" id="enlace-servicio" class="btn-header">Servicios</a>
+                <a href="#" id="enlace-trabajo" class="btn-header">Trabajos</a>
+                <a href="#" id="enlace-contacto" class="btn-header">Contacto</a>
+              {% if user.is_authenticated == True %}
+                {% if user.is_staff%}
+                  <a href="{% url 'cotizacion' %}">Listado de Clientes</a>
+                  <a href="{% url 'create_cotizacion' %}">Ingresar Cliente</a>
+                {% endif %}
+                <a href="{% url 'logout_view' %}">Cerrar Sesión</a>
+              {% else %}
+                <a href="{% url 'register' %}" class="btn-header">Registarse</a>
+              {% endif %}
+            </div>
+
+            <div class="icono" id="open">
+                <span>&#9776;</span>
+            </div>
+    </nav>
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-12 ">
+      {% block content %}{% endblock %}
+      </div>
+    </div>
+
+  </div>
+
+  <footer id="contacto" style="background-color: #33b5e5;">
+      <div class="footer contenedor">
+          <div class="marca-logo">
+  
+          </div>
+          <div class="iconos">
+              <a href="https://www.youtube.com/watch?v=TddPnSQKD1U"> <i class="fab fa-youtube"></i></a>
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://github.com/"><i class="fab fa-github"></i></a>
+          </div>
+          <p style="color: whitesmoke;">La pasión e innovación es lo que nos distingue del resto</p>
+      </div>
+  </footer>
+</body>
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/filtro.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</html>

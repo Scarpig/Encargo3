@@ -1,0 +1,161 @@
+@font-face{   /*importo letras de boton :s*/
+	font-family:principal;
+	src:url(fonts/lato/Lato-Regular.ttf); /*aqui esta la carpeta donde tengo las letras*/
+}
+
+html{
+	
+	background-image: url("{% static 'imgg/fondo.png'%}");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	background-attachment:fixed; 
+}
+
+#contenedor-form{
+	width:450px;
+	background-color:rgba(0,0,0,0.51);
+	padding: 35px 45px 35px 50px;
+	margin:auto;
+	margin-top:65px;
+	border-radius:9px;
+	
+}
+ .input{
+	 color:#3c3c3c;
+	 font-family:principal;
+	 font-size:18px;
+	 line-height:22px;
+	 background-color:#fbfbfb;
+	 padding: 13px 13px 13px 54px;
+	 margin-bottom:10px;
+	 width:100%;
+	 box-sizing:border-box;
+	 
+ }
+ 
+ .input:focus{
+	 background-color:#fff;
+	 border: 3px solid #3498db;
+	 color:color:#1b8f31;
+	 padding: 13px 13px 13px 54px;
+	 
+ }
+ 
+ /*imagenes*/
+
+ #nombre{
+	 background-image:url(../presets/persona.png);
+	 background-size: 30px 30px;
+	 background-position: 11px 11px;
+	 background-repeat: no-repeat;
+	 
+ }
+ 
+  #email{
+	 background-image:url(../presets/email.png);
+	 background-size: 30px 30px;
+	 background-position: 11px 11px;
+	 background-repeat: no-repeat;
+	 
+ }
+ 
+  #telefono{
+	 background-image:url(../presets/telefono.png);
+	 background-size: 30px 30px;
+	 background-position: 11px 11px;
+	 background-repeat: no-repeat;
+	 
+ }
+ 
+  #mensaje{
+	 background-image:url(../presets/mensaje.png);
+	 background-size: 30px 30px;
+	 background-position: 11px 11px;
+	 background-repeat: no-repeat;
+	 
+ }
+ 
+ textarea{
+	 width:100%;
+	 height:150px;
+	 line-height:150%;
+	 resize:vertical;
+	 
+ }
+ 
+ #enviar{
+	font-family:principal;
+	float:left;
+	width:100%;
+	border: #fff solid 4px;
+	cursor:pointer;
+	background-color:#00a0f4;
+	color:white;
+	font-size:28px;
+	font-weight:670;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	 
+ }
+ 
+ #enviar:hover{
+	 background-color:rgba(0,0,0,0);
+	 color: #000;
+	 
+ }
+ 
+ .transicion{
+	 width:0px;
+	 height:74px;
+	 background-color#33de80;
+	 -webkit-transition: .7s ease;
+	  -moz-transition: .7s ease;
+	  -o-transition: .7s ease;
+	  -ms-transition: .7s ease;
+	  transition: .7s ease;
+ }
+
+.enviar:hover .transicion{
+	width:100%;
+	background-color:#33de80;
+	
+}
+
+input.error, textarea.error{
+	 font-family:principal;
+	 font-size:18px;
+	 line-height:22px;
+	 background-color:#F78181;
+	 padding: 13px 13px 13px 54px;
+	 margin-bottom:10px;
+	 width:100%;
+	 box-sizing:border-box;
+	 border:0px;
+}
+
+input.error::-webkit-input-placeholder{
+	color:white;
+}
+
+textarea.error::-webkit-input-placeholder{
+	color:white;
+	
+}
+
+@media only screen and (max-width: 580px) {
+  #contenedor-form{
+    left: 3%;
+    margin-right: 3%;
+    width: 88%;
+    margin-left: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+ 
+ 
+

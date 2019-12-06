@@ -1,0 +1,49 @@
+{% extends "base_generic.html"%}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<section>
+    <div>
+        <h2> cotizacion</h2>
+    </div>
+</section>
+<section>
+    <div>
+        <form action="" method="POST">
+
+            {% csrf_token %}
+            <table>
+        
+            {{form.as_table}}
+            </table>
+            <input type="submit" value="Ingresar">
+        
+        </form>
+        <button><a href="{% url 'index' %}">Volver</a></button>
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

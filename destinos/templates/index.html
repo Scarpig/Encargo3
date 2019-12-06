@@ -1,0 +1,184 @@
+{% extends "base_generic.html" %}
+{% load static %}
+<!-- Add additional CSS in static file -->
+{% block content %}
+<title>Local Library</title>
+<div >
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</div>
+
+<header>
+    <div class="textos">
+        <h1>relaxing trips</h1>
+        <a href="{% url 'carrete' %}">
+            <h2>Agencia de vuelos</h2>
+        </a>
+        <!--"" aqui voy a meter la pinche ruleta !!!AAAAAAA""-->
+    </div>
+</header>
+
+
+<main>
+    <section class="team contenedor" id="equipo">
+        <h3>Nuestro equipo</h3>
+        <p class="after">gente que da la vida por que disfrutes tu viaje</p>
+        <div class="card">
+            <div class="content-card">
+                <div class="people">
+                    <img src="{% static 'images/people1.jpg' %}" alt="">
+                </div>
+                <div class="texto-team">
+                    <h4>Rodrigo Leon</h4>
+                    <p>Director Ejecutivo</p>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="people">
+                    <img src="{% static 'images/people2.jpg' %}" alt="">
+                </div>
+                <div class="texto-team">
+                    <h4>Scarlet vallejos</h4>
+                    <p>Responsable de ventas</p>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="people">
+                    <img src="{% static 'images/people3.jpg' %}" alt="">
+                </div>
+                <div class="texto-team">
+                    <h4>Ángel Muñoz</h4>
+                    <p>Responsable de las Personas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="servicio">
+        <div class="contenedor">
+            <h3>Nuestros servicios</h3>
+            <p class="after">Siempre mejorando para ti</p>
+            <div class="servicios">
+                <div class="caja-servicios">
+                    <img src="{% static 'images/heart.png' %}" alt="">
+                    <!--""aqui le metes losiconos corazoncito  ""-->
+                    <h4>confiables</h4>
+                    <p>su comodidad es primordial</p>
+                </div>
+                <div class="caja-servicios">
+                    <img src="{% static 'images/responsive.png' %}" alt="">
+                    <h4>seguros</h4>
+                    <p>velamos en cada momento por su seguridad</p>
+                </div>
+                <div class="caja-servicios">
+                    <img src="{% static 'images/efectos.png' %}" alt="">
+                    <h4>economicos</h4>
+                    <p>viajes practicamente regalados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="work contenedor" id="trabajo">
+        <h3>Nuestro trabajo</h3>
+        <p class="after">Hacemos de algo simple algo extraordinario</p>
+        <div class="botones-work">
+            <ul>
+                <li class="filter active" data-nombre='todos'>Todos</li>
+                <li class="filter" data-nombre='tropicales'>tropicales</li>
+                <li class="filter" data-nombre='tecnlogicos'>tecnlogicos</li>
+                <li class="filter" data-nombre='nevados'>nevados
+                </li>
+            </ul>
+        </div>
+        <div class="galeria-work">
+            <div class="cont-work tropicales">
+                <div class="img-work">
+                    <img src="{% static 'images/costa rica.jpg' %}" alt="">
+                </div>
+                <div class="textos-work">
+                    <h5><a href="https://www.instagram.com/visit_costarica/?hl=es-la">Costa Rica </a></h5>
+                </div>
+            </div>
+            <div class="cont-work tropicales">
+                <div class="img-work">
+                    <img src="{% static 'images/tailandia.jpg' %}" alt="">
+                </div>
+                <div class="textos-work">
+                    <h5><a href="https://www.instagram.com/tailandiaexperience_/?hl=es-la">tailandia </a></h5>
+                </div>
+            </div>
+            <div class="cont-work tropicales">
+                <div class="img-work">
+                    <img src="{% static 'images/Indonesia.jpg' %}" alt="">
+                </div>
+
+                <div class="textos-work">
+                    <h5><a href="https://www.instagram.com/indtravel/?hl=es-la">Indonesia </a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="galeria-work">
+            <div class="cont-work tecnlogicos">
+                <div class="img-work">
+                    <img src="{% static 'images/inglaterra.jpg' %}" alt="">
+                </div>
+                <div class="textos-work">
+                    <h5><a href="https://www.instagram.com/hotelinglaterrasevilla/?hl=es-la">Inglaterra </a></h5>
+                </div>
+            </div>
+            <div class="cont-work tecnlogicos">
+                <div class="img-work">
+                    <img src="{% static 'images/corea del sur.jpg' %}" alt="">
+                </div>
+                <div class="textos-work">
+                    <h5><a href="https://www.instagram.com/exploracorea/?hl=es-la">corea del sur</a></h5>
+                </div>
+            </div>
+            <div class="cont-work tecnlogicos">
+                <div class="img-work">
+                    <img src="{% static 'images/EEUU.jpg' %}" alt="">
+                </div>
+                <div class="textos-work">
+                    <h5><a href="https://www.instagram.com/estados.unidos_oficial/">Estados Unidos </a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="galeria-work">
+            <div class="cont-work nevados">
+                <div class="img-work">
+                    <img src="{% static 'images/Rusia.jpg' %}" alt="">
+                </div>
+                <div class="textos-work">
+                    <h5><a href="https://www.instagram.com/tutourrusia/">Rusia </a></h5>
+                </div>
+            </div>
+            <div class="cont-work nevados">
+                <div class="img-work">
+                    <img src="{% static 'images/Finlandia.jpg' %}" alt="">
+                </div>
+                <div class="textos-work">
+                    <h5><a href="https://www.instagram.com/guiafinlandia/">Finlandia </a></h5>
+                </div>
+            </div>
+            <div class="cont-work nevados">
+                <div class="img-work">
+                    <img src="{% static 'images/Islandia.jpg' %}" alt="">
+                </div>
+                <div class="textos-work">
+                    <h5><a href="https://www.instagram.com/luanaislandtour/">Islandia </a></h5>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</main>
+
+
+
+
+
+
+
+
+{% endblock %}

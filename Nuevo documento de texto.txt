@@ -1,0 +1,13 @@
+Integrantes: Rodrigo Leon 
+             Scarlet vallejos
+
+Usuario: rodrigo
+contraseña: contraseña123
+
+links'
+
+destinos/(este es el index
+cotizaciones/(listas)
+cotizaciones/create(este es el crear)
+cotizacion/<pk>/update(este es el actualizar)
+cotizacion/<pk>/delete(eliminar)

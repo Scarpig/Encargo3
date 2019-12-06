@@ -1,0 +1,47 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{%block content%}
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<section>
+    <div style="padding-left: 42%;">
+        <h1>Listado de cotizaciones</h1>
+    </div>
+</section>
+<section>
+   <div>
+       
+    {% if list %}
+    <ul>
+        <form method="POST" style="padding-left: 43%;">{% csrf_token %}
+            <input type="text" name="busca_rut" id="busca_rut" placeholder="   --Ingrese el rut a buscar--" style="width: 300px; height: 40px; font-size: 24px;">
+        </form>
+
+        {% for cotizacion in list %}
+            <li>
+                <!-- <a href="#">{{cotizacion.rut}}</a>({{ cotizacion.nombre }}) -->
+                <p>----------------------------------------------------------------------</p>
+                <h3>Rut: {{cotizacion.rut}}</h3>
+                <h3>Nombre: {{cotizacion.nombre}}</h3>
+                <h3>Correo:  {{cotizacion.email }}</h3>
+                <h3>Mensaje: {{cotizacion.mensaje }} </h3>
+            </li>
+        {%endfor%}
+
+    </ul>
+    {%else%}
+    <p>
+        No hay cotizacion en la base de datos...
+    </p>
+    {%endif%}
+   </div>
+</section>
+
+
+{%endblock%}
